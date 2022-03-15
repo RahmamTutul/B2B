@@ -6,15 +6,12 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\TopMenuController;
 use App\Http\Controllers\Admin\TradeShowController;
-use App\Http\Controllers\Admin\TradeshowsController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Frontend\ContactController;
-use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Frontend\RfqController;
 use App\Models\Banner;
-use App\Models\Contact;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 
 Route::get('/', function () {
     $banners= Banner::latest()->take(3)->get();
@@ -44,6 +41,7 @@ Route::get('/contact', function () {
 });
 
 Route::match(['get', 'post'], 'contact',[ContactController::class ,'contact'])->name('contact');
+Route::match(['get', 'post'], 'rfq',[RfqController::class ,'add'])->name('rfq');
 
 Route::group(['prefix' => 'b2b/' ,'as'=>'admin.'] , function () {
     Route::match(['get', 'post'], 'admin_login',[AdminController::class ,'login'])->name('login');

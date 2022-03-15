@@ -6,12 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
     public function contact(Request $request){
         if($request->isMethod('post')){
+            
             // dd($request->all());
             $info= new Contact;
             $info->question=$request['question'];

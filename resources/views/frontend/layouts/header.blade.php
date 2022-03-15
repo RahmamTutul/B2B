@@ -77,7 +77,7 @@
             <div class="col-md-4 col-xl-3 d-flex justify-content-center justify-content-md-end mt-md-0 mt-2 header-list"> 
                 <ul> 
                     <li> <i class="fas fa-user-circle"></i> <small> <a href="{{'/login'}}">Sign In</a> <sub class="headerLoginRegisterSeperator">/</sub> <a href="javascript:registerPopup('Join Free');" title="Join Free" type="button" data-toggle="modal" data-target="#exampleModalCenter">Join Free</a> </small> <span>My Account</span> </li> 
-                    <li> <a href="postrfq.html"> <i class="fas fa-envelope"></i> <small>Post</small> <span>RFQ</span> </a> </li> 
+                    <li> <a href="{{url('rfq')}}"> <i class="fas fa-envelope"></i> <small>Post</small> <span>RFQ</span> </a> </li> 
                 </ul> 
             </div> 
         </div> 
